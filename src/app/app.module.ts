@@ -3,11 +3,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { HelloComponent } from './hello.component';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
-import {AngularFireAuthModule} from 'angularfire2/auth'
+import {AngularFireAuthModule} from 'angularfire2/auth';
 
 const config = {
       apiKey: "AIzaSyB6TkRSVOJtM5UyTuLTR5fol6YNNcsAAk4",
@@ -37,7 +36,7 @@ import {MatButtonModule, MatIconModule, MatCardModule, MatFormFieldModule, MatIn
     MatFormFieldModule,MatInputModule,
     ReactiveFormsModule,
   ],
-  declarations: [AppComponent, HelloComponent],
+  declarations: [AppComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
