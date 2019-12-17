@@ -1,0 +1,27 @@
+<div *ngIf="afAuth.user | async as user; else showLogin">
+	<h1>Hello {{ user.email }}!</h1>
+
+  <form class="example-form">
+    <mat-form-field class="example-full-width">
+      <input #name matInput maxlength="256" placeholder="Message" >
+      <mat-hint align="start"><strong>Some name to add</strong> </mat-hint>
+      <mat-hint align="end">{{name.value.length}} / 256</mat-hint>
+    </mat-form-field>
+    <button mat-button color="primary" (click)="add(name.value)"><mat-icon>add</mat-icon></button>
+  </form>
+   
+  <mat-card class="example-card" *ngFor="let item of items | async">
+    <mat-card-content>
+      {{item.name}} <button mat-button color="warn" (click)="del(item)"><mat-icon>delete</mat-icon></button>
+    </mat-card-content>
+  </mat-card>
+
+	<button mat-button (click)="logout()">Logout</button>
+</div>
+<ng-template #showLogin>
+  <div *ngIf="!pendingRequest" style="text-align:center">
+    <p>C'est mieux si on est loggé</p>
+    <button mat-raised-button color="primary"  (click)="login()">Login with Google</button>
+  </div>
+	
+</ng-template>
