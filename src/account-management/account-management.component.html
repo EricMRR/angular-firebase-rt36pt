@@ -1,0 +1,21 @@
+<div>
+  <h2>Administraci&oacute;n de cuenta</h2>
+</div>
+
+<div class="padding-30">Inicia sesi&oacute;n.</div>
+<div>
+      <div class="inputField">
+        <div class="inputTitle">Correo electr&oacute;nico</div>
+        <div class="inputField"><input type="text" /></div>
+      </div>
+      <div class="inputField">
+        <div class="inputTitle">Contrase&ntilde;a</div>
+        <div class="inputField"><input type="password" /></div>
+      </div>
+</div>
+
+<div class="padding-30"><a (click)="startSession()">Iniciar sesi&oacute;n</a></div>
+
+<div>Si a&uacute;n no cuentas con una cuenta, por favor registrate para disfrutar de la experiencia completa.</div>
+
+<div class="padding-30"><a [routerLink]="['/account_register']">Registrarme</a></div>

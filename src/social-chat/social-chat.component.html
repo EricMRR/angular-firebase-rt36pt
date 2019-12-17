@@ -1,0 +1,21 @@
+<div>
+  <h2>Chat </h2>
+</div>
+<div>
+  <div id="divChatWindow" class="divChatWindow">
+
+    <div class="divMessage" *ngFor="let message of messages.history">
+      <div>{{message.text}}</div>
+      <div>
+        <i class="material-icons send-button" *ngIf="message.sended && !message.readed">done</i>
+        <i class="material-icons send-button" *ngIf="message.sended && message.readed">done_all</i>
+      </div>
+    </div>
+  
+    <div class="divFinalMessage"></div>
+
+  </div>
+  <div>
+    <input id="txtMessage" [(ngModel)]="messages.actual.text" (keyup.enter)="sendText()" class="message-textbox" /> <a (click)="sendText()"><i class="material-icons send-button">send</i></a>
+  </div>
+</div>

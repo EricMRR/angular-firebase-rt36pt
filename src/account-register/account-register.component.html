@@ -1,0 +1,77 @@
+<div>
+  <h2>Registro</h2>
+</div>
+
+<div *ngIf="state.service == null || state.service == undefined">
+  <div><h3>Registrate con</h3></div>
+  <div *ngFor="let service of logonServices" class="singleElement">
+    <div class="title">{{service.name}}</div>
+    <div class="info"><a (click)="startRegistry(service)">Registrar</a></div>
+  </div>
+</div>
+
+<div *ngIf="state.service != null && state.service != undefined">
+  <div><h3>Completa tu registro</h3></div>
+  <div>
+
+    <div>
+
+      <div>
+        <div>Tipo de cuenta</div>
+        <div>
+          <div [className]="'accountTypeSelector' + (state.accountType == type ? ' selected' : '')" class="accountTypeSelector" *ngFor="let type of accountTypes">
+            <a (click)="setAccountType(type)">
+              <div class="title">{{type.name}}</div>
+              <div class="description">{{type.description}}</div>
+              <div class="secondDescription">{{type.secondDescription}}</div>
+              <div class="actions"></div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="inputField">
+        <div class="inputTitle">Seud&oacute;nimo</div>
+        <div class="inputField"><input type="text" /></div>
+      </div>
+
+      <div class="inputField">
+        <div class="inputTitle">Nombre</div>
+        <div class="inputField"><input type="text" /></div>
+      </div>
+
+      <div class="inputField">
+        <div class="inputTitle">Apellido paterno</div>
+        <div class="inputField"><input type="text" /></div>
+      </div>
+
+      <div class="inputField">
+        <div class="inputTitle">Apellido materno</div>
+        <div class="inputField"><input type="text" /></div>
+      </div>
+
+      <div class="inputField">
+        <div class="inputTitle">Fecha de nacimiento</div>
+        <div class="inputField"><input type="text" /></div>
+      </div>
+
+      <div class="inputField">
+        <div class="inputTitle">G&eacute;nero</div>
+        <div class="inputField"><input type="text" /></div>
+      </div>
+
+      <div class="inputField">
+        <div class="inputTitle">Correo electr&oacute;nico</div>
+        <div class="inputField"><input type="text" /></div>
+      </div>
+
+      <div class="inputField">
+        <div class="inputTitle">N&uacute;mero de tel&eacute;fono</div>
+        <div class="inputField"><input type="text" /></div>
+      </div>
+
+    </div>
+
+  </div>
+  <div><a (click)="cancel()">Cancelar</a></div>
+</div>

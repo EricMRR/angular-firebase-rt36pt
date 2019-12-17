@@ -1,0 +1,56 @@
+.singleElement{
+  width: 100%;
+  margin: 10px;
+  padding: 10px;
+  background-color: #dddddd;
+}
+
+.singleElement title{
+
+}
+.singleElement text{
+
+}
+.singleElement div.info{
+  font-size: smaller;
+}
+
+.accountTypeSelector{
+  width: 200px;
+  padding: 10px;
+  border-radius: 3px;
+  border: 2px solid #dddddd;
+  text-align: center;
+  margin-bottom: 16px;
+}
+.accountTypeSelector.selected{
+  background-color: #eeeeee;
+}
+
+.accountTypeSelector div.title{
+  font-size: xx-large;
+  color: #ffffff;
+  padding: 20px;
+  background-color: #1976d2;
+}
+.accountTypeSelector.selected div.title{
+
+}
+
+.accountTypeSelector div.description{
+  font-size: x-large;
+  color: #333333;
+  padding: 10px;
+}
+.accountTypeSelector.selected div.description{
+
+}
+
+.accountTypeSelector div.secondDescription{
+  color: #333333;
+  padding: 10px;
+  background-color: #dddddd;
+}
+.accountTypeSelector.selected div.secondDescription{
+
+}

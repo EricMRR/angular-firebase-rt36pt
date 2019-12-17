@@ -1,3 +1,23 @@
+<app-top-bar></app-top-bar>
+
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
+
+<!--div class="container">
+  <p>Ver todos los usuarios</p>
+  <ul>
+    <li *ngFor="let item of items">  
+        <p>Id : <strong>{{item.id}}</strong></p>
+        <p>Nombre: <strong> {{item.name}}</strong></p>
+        <p>Tipo: <strong> {{item.type}}</strong></p>
+      <br>
+    </li>
+  </ul>
+</div-->
+
+<!--div id="firebaseui-auth-container"></div>
+
 <div *ngIf="afAuth.user | async as user; else showLogin">
 	<h1>Hello {{ user.email }}!</h1>
 
@@ -24,4 +44,4 @@
     <button mat-raised-button color="primary"  (click)="login()">Login with Google</button>
   </div>
 	
-</ng-template>
+</ng-template-->

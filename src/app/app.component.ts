@@ -1,4 +1,23 @@
 import { Component } from '@angular/core';
+
+import * as firebase from 'firebase/app';
+import { AngularFirestore } from 'angularfire2/firestore';
+import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
+
+//import 'rxjs/add/operator/map'; //import { Observable } from 'rxjs';
+
+@Component({
+  selector: 'site-app',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  constructor(public db: AngularFireDatabase) { }
+
+  ngOnInit() { }
+}
+
+/*import { Component } from '@angular/core';
 //import { AngularFirestore } from 'angularfire2/firestore';
 import { Observable } from 'rxjs';
 //import { AngularFireAuth } from 'angularfire2/auth';
@@ -10,7 +29,7 @@ import { AngularFirestore } from '@angular/fire/firestore';
 //import { auth } from 'firebase/app';
 
 @Component({
-  selector: 'my-app',
+  selector: 'site-app',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
@@ -84,10 +103,10 @@ export class AppComponent {
       }
     }
     this.ui.start('#firebaseui-auth-container', uiConfig);
-    /*
-        this.afAuth.auth.signInWithEmailAndPassword('nicolas@thomasson.fr', "123456");*/
+            //this.afAuth.auth.signInWithEmailAndPassword('nicolas@thomasson.fr', "123456");
   }
   logout() {
     this.afAuth.auth.signOut();
   }
 }
+*/
